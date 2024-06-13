@@ -1,0 +1,96 @@
+.navbar {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #39ff14;
+  }
+  
+  .navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color:#39ff14 !important;
+    text-shadow: 0 0 5px #39ff14;
+  }
+
+  .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white !important;
+    transition: color 0.3s;
+    text-shadow: 0 0 5px #39ff14;
+    font-size: 18px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #39ff14 !important;
+  }
+  
+  .navbar-toggler {
+    border-color:rgba(57, 255, 20, 1);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(57, 255, 20, 1)' stroke-width='2' linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+ /* Border Effect */
+.neon-border {
+  position: relative;
+  height: 5px;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #39ff14;
+  background: linear-gradient(90deg, transparent, #39ff14, transparent);
+  animation: spark 2.5s linear infinite;
+}
+
+#home,#about,#projects,#contact{
+  border:none;
+}
+
+@keyframes spark {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 
+.neon-border {
+  position: relative;
+  height: 2px;
+  background: ;
+  overflow: hidden;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  animation: spark 5s linear infinite;
+}
+*/
+
+@media (max-width: 992px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      margin: 0.5rem 0;
+    }
+  }
+  

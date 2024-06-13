@@ -1,0 +1,209 @@
+#about {
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+  border: none;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #39ff14;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  clear: both;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #39ff14;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #39ff14;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  float: left;
+  clear: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: right;
+  clear: right;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: #39ff14;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.timeline-item span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Skills Section Styles */
+.skill-card {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  animation: wavy 2s infinite ease-in-out;
+}
+
+@keyframes wavy {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill-logo {
+  font-size: 7rem;
+  opacity: 0.5;
+  position: relative;
+  margin-bottom: 20px; /* Adjusted to provide space for the percentage */
+}
+
+.skill-percentage {
+  position: absolute;
+  bottom: 65px; /* Moved slightly higher to overlap the icon */
+  right: 10px;
+  background-color: #1a1a1a;
+  border: 3px solid;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+  z-index: 1;
+  font-weight: bolder;
+}
+
+.skill-name {
+  margin-top: -10px; /* Adjusted to bring the name closer to the icon */
+  color: #39ff14;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 10px 0;
+  }
+
+  .timeline::before {
+    left: 10%;
+  }
+
+  .timeline-item {
+    margin: 10px 0;
+  }
+
+  .timeline-dot {
+    left: 10%;
+  }
+
+  .timeline-content {
+    width: 80%;
+    margin-left: 20%;
+    float: none;
+    clear: both;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 20%;
+  }
+
+  .skill-card {
+    margin: 10px;
+  }
+
+  .skill-logo {
+    font-size: 5rem; /* Decreased size for smaller screens */
+    margin-bottom: 10px; /* Adjusted to provide space for the percentage */
+  }
+
+  .skill-percentage {
+    width: 40px; /* Reduced size for smaller screens */
+    height: 40px; /* Reduced size for smaller screens */
+    line-height: 36px; /* Adjusted for smaller size */
+    right: 5px; /* Adjusted for smaller size */
+    font-size: 1rem; /* Reduced font size */
+  }
+
+  .skill-name {
+    margin-top: -5px; /* Adjusted to bring the name closer to the icon */
+  }
+}
+
+/* Add this CSS to your stylesheet */
+
+@media (max-width: 576px) {
+  .skill-card {
+    width: 100%; /* Set the width of skill cards to 100% */
+    margin: 10px 0; /* Adjust margin for better spacing */
+    padding: 10px; /* Add padding for better visual appearance */
+  }
+
+  .skill-logo {
+    font-size: 3rem; /* Decrease the font size for smaller screens */
+    margin-bottom: 5px; /* Adjust margin for better spacing */
+  }
+
+  .skill-percentage {
+    width: 30px; /* Adjust width for smaller screens */
+    height: 30px; /* Adjust height for smaller screens */
+    line-height: 26px; /* Adjust line height for smaller screens */
+    right: 5px; /* Adjust position for smaller screens */
+    font-size: 0.8rem; /* Decrease font size for smaller screens */
+    z-index: 1; /* Ensure percentage overlaps with skill logo */
+    position: absolute; /* Ensure the position is absolute */
+  }
+
+  .skill-name {
+    margin-top: -5px; /* Adjust margin for better spacing */
+    font-size: 1rem; /* Decrease font size for smaller screens */
+  }
+}

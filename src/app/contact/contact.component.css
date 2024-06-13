@@ -1,0 +1,116 @@
+#contact {
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+  border: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding-inline: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 2em;
+  color: #39ff14;
+  font-size: 1.2em;
+  background-color: transparent;
+  align-self: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #39ff14;
+  font-weight: bold;
+  outline: 1px solid #39ff14;
+  transition: all ease-in-out 0.3s;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: #39ff14;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, #39ff14 0%, #39ff14 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.social-links a {
+  color: #39ff14;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s, text-shadow 0.3s;
+  position: relative;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 24px #39ff14, 0 0 32px #39ff14;
+}
+
+.social-links i {
+  font-size: 1.8em; /* Adjust icon size */
+}

@@ -1,0 +1,68 @@
+<section id="about" class="fill-height px-lg-5">
+  <div class="container mt-5">
+    <div class="row justify-content-center text-center neon-text">
+      <div class="col-md-8">
+        <h2 class="text-brand mb-4">ABOUT ME</h2>
+        <p class="lead mb-4">
+          Hey there! I'm Vigneswaran, a front-end developer who started this journey back in college. I've gotten pretty good with HTML, CSS, JavaScript, Bootstrap, and Angular. I love using Visual Studio Code and Sublime Text for my coding adventures and showing off my projects on GitHub. I’ve also had fun working with Firebase to create custom APIs. And a special shoutout to ChatGPT for being an awesome sidekick in my learning journey. I'm always eager to dive into new tech and keep exploring!
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h2 class="text-brand mb-4">EDUCATION</h2>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let education of educations">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>{{ education.degree }}</h3>
+              <p>{{ education.institution }}</p>
+              <p class="year" style="opacity: 0.5;">{{ education.year }}</p>
+              <p>{{ education.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center mt-5">
+    <div class="col-lg-10 text-center">
+      <h2 class="text-brand mb-4">SKILLS</h2>
+      <div class="row">
+        <div class="col-md-6 tech">
+          <h3 class="text-brand mb-3">TECHNICAL SKILLS</h3>
+          <div class="row">
+            <div class="col-md-6 col-sm-6" *ngFor="let skill of skills">
+              <div *ngIf="skill.category === 'Technical Skills'">
+                <div class="skill-card">
+                  <i [class]="skill.icon" class="skill-logo"></i>
+                  <div class="skill-percentage"
+                       [ngStyle]="{
+                         'border-color': skill.color,
+                         'background-color': skill.color + '80'
+                       }">
+                    {{ skill.percentage }}%
+                  </div>
+                  <p class="skill-name">{{ skill.name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-brand mb-3">DEVELOPEMENT TOOLS</h3>
+          <div class="row">
+            <div class="col-md-6 col-sm-6" *ngFor="let skill of skills">
+              <div *ngIf="skill.category === 'Development Tools'">
+                <div class="skill-card">
+                  <i [class]="skill.icon" class="skill-logo"></i>
+                  <p class="skill-name">{{ skill.name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

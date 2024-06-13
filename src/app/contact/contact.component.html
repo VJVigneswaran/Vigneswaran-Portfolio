@@ -1,0 +1,55 @@
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_USER_ID");
+  })();
+</script>
+
+<section id="contact" class="fill-height px-lg-5">
+  <div class="container">
+    <div class="row justify-content-center text-center pb-2">
+      <div class="col-lg-8">
+        <h3 class="text-brand">Let's Connect</h3>
+        <p class="lead mb-4">If you want to get in touch, feel free to drop me a message below.</p>
+      </div>
+    </div>
+    <div class="form-card1">
+      <div class="form-card2">
+        <form class="form" (submit)="sendEmail($event)">
+          <p class="form-heading">Get In Touch</p>
+    
+          <div class="form-field">
+            <input required="" placeholder="Name" class="input-field" type="text" />
+          </div>
+    
+          <div class="form-field">
+            <input
+              required=""
+              placeholder="Email"
+              class="input-field"
+              type="email"
+            />
+          </div>
+    
+          <div class="form-field">
+            <textarea
+              required=""
+              placeholder="Message"
+              cols="30"
+              rows="3"
+              class="input-field"
+            ></textarea>
+          </div>
+    
+          <button type="submit" class="sendMessage-btn">Send Message</button>
+        </form>
+      </div>
+      </div>
+      <div class="social-links text-center mt-4">
+        <a href="https://linkedin.com/in/your-profile" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-profile" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com/" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:your-email@gmail.com" target="_blank" class="mx-2"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>

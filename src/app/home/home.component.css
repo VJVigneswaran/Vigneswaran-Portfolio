@@ -1,0 +1,104 @@
+/* Importing a cool font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Container and Text Styling */
+#home {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Intro Text */
+.intro {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #39ff14;
+}
+
+/* Name Styling */
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif; /* Applying the new font */
+  background: linear-gradient(90deg, #39ff14, #39ff14); /* Consistent neon green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  height: 10px;
+  background: linear-gradient(90deg, #39ff14, #39ff14); /* Consistent neon green gradient */
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.5;
+}
+
+.exclamation {
+  font-size: 3.5rem;
+  color: #39ff14; /* Consistent neon green color */
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+/* Button Styling */
+.btn-neon {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #666666; 
+  color: #666666; 
+  padding: 10px 20px;
+  font-family: 'Your Font', sans-serif; /* Specify your desired font */
+  font-size: 18px; /* Adjust font size as needed */
+  cursor: pointer;
+  overflow: hidden; /* Hide overflow to prevent glitchy animation */
+}
+
+.btn-neon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #39ff14; /* Neon green background */
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0); /* Initial scale to 0 */
+}
+
+.btn-neon:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+  opacity: 0; /* Hide after scaling */
+}
+
+.btn-neon:hover {
+  color: #39ff14; /* Dark text color on hover */
+  border-color: #39ff14; /* Dark border color on hover */
+  z-index: 1;
+}
+/* Hand Wave Animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate__wave {
+  animation: wave 1.5s infinite;
+}

@@ -1,0 +1,28 @@
+<section id="projects" class="fill-height px-lg-5">
+  <div class="container">
+    <div class="row pb-4">
+      <div class="col-lg-12 text-center">
+        <h2 class="text-brand flicker mb-4">Projects</h2>
+        <p class="lead">Here are some of my recent works.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="card-custom" (click)="toggleCard(project)">
+          <div class="card-custom-inner">
+            <div class="card-custom-front">
+              <img [src]="project.image" alt="{{project.title}}" class="img-fluid">
+            </div>
+            <div class="card-custom-back">
+              <div class="card-body text-center d-flex flex-column justify-content-center">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                <a [href]="project.link" class="btn btn-neon mt-auto" target="_blank">VIEW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

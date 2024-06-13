@@ -1,0 +1,91 @@
+#projects {
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+  border: none;
+}
+
+.card-custom {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  perspective: 1000px; /* Add perspective for 3D effect */
+  border: 2px solid #39ff14; 
+  border-radius: 10px;
+}
+
+.card-custom-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Add transition for smooth flipping */
+  transform-style: preserve-3d; /* Preserve 3D effect */
+}
+
+.card-custom:hover .card-custom-inner {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.card-custom-front,
+.card-custom-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side of the card initially */
+  border-radius: 10px;
+}
+
+.card-custom-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-custom-back {
+  transform: rotateY(180deg); /* Initially hide the back side of the card */
+  background-color: #1a1a1a; /* Back side background color */
+  color: #ffffff; /* Back side text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-custom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-title {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+}
+
+.card-text {
+  color: #ffffff;
+}
+
+
+.btn-neon {
+  font-size: 1.2rem;
+  font-family: monospace;
+  padding: 10px 20px;
+  color: #000000;
+  background-color: #39ff14;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+  /*box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;*/
+  transition: all 0.3s ease-in-out;
+  margin-top: auto;
+}
+
+.btn-neon:hover {
+  color: #39ff14;
+  background-color: #000000;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 50px #39ff14;
+}
