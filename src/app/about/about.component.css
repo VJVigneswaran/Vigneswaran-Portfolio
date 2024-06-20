@@ -8,6 +8,10 @@
   border: none;
 }
 
+.justify{
+  text-align: justify;
+}
+
 /* Timeline Styles */
 .timeline {
   position: relative;
@@ -49,6 +53,7 @@
   position: relative;
   width: 45%;
   padding: 20px;
+  margin-bottom: 10px;
   background: #1a1a1a;
   border-radius: 8px;
   box-shadow: 0 0 15px #39ff14;
@@ -87,6 +92,21 @@
   margin: 20px;
   padding: 20px;
   animation: wavy 2s infinite ease-in-out;
+}
+
+.skills{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.sub-skills{
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 15px #39ff14;
+  margin: 0 auto;
 }
 
 @keyframes wavy {
@@ -156,6 +176,11 @@
     margin-left: 20%;
   }
 
+  .sub-skills{
+  border: none;
+  box-shadow: none;
+  }
+
   .skill-card {
     margin: 10px;
   }
@@ -181,20 +206,27 @@
 /* Add this CSS to your stylesheet */
 
 @media (max-width: 576px) {
+  .skills{
+      flex: 0 0 auto;
+      width: 50%;
+  }
+  .sub-skills{
+    border: none;
+  }
   .skill-card {
-    width: 100%; /* Set the width of skill cards to 100% */
     margin: 10px 0; /* Adjust margin for better spacing */
     padding: 10px; /* Add padding for better visual appearance */
   }
 
   .skill-logo {
-    font-size: 3rem; /* Decrease the font size for smaller screens */
+    font-size: 4rem; /* Decrease the font size for smaller screens */
     margin-bottom: 5px; /* Adjust margin for better spacing */
   }
 
   .skill-percentage {
     width: 30px; /* Adjust width for smaller screens */
-    height: 30px; /* Adjust height for smaller screens */
+    height: 30px;
+    bottom: 50px;
     line-height: 26px; /* Adjust line height for smaller screens */
     right: 5px; /* Adjust position for smaller screens */
     font-size: 0.8rem; /* Decrease font size for smaller screens */

@@ -25,8 +25,8 @@ export class ProjectsComponent implements OnInit{
     {
       title: 'Portfolio', 
       description: 'This is my Personal portfolio website ', 
-      link: 'https://github.com/VJVigneswaran/Todo-App', 
-      image: 'assets/images/project2.png' 
+      link: 'https://vigneswaran-portfolio.netlify.app/', 
+      image: 'assets/images/project3.png' 
     }
   ];
 

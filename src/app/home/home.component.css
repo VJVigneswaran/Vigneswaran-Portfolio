@@ -44,12 +44,6 @@
   opacity: 0.5;
 }
 
-.exclamation {
-  font-size: 3.5rem;
-  color: #39ff14; /* Consistent neon green color */
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-}
-
 /* Button Styling */
 .btn-neon {
   position: relative;
